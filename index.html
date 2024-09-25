@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escalação de Time</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <h1>Escalação do time</h1>
+        <p>Monte seu time adicionando jogadores nele!</p>
+
+    </header>
+    <main>
+        <section class="menuEscalacao">
+            <div>
+                <label for="posicaoJogador">Informe qual a posição do jogador</label><br>
+                <input type="text" id="posicaoJogador">
+            </div>
+            <br>
+            <div>
+                <label for="nomeJogador">Informe qual o nome do Jogador</label> <br>
+                <input type="text" id="nomeJogador">
+            </div>
+            <br>
+            <div>
+                <label for="camisetaJogador">Informe o número da camiseta do Jogador</label><br>
+                <input type="number" id="camisetaJogador">
+            </div>
+            <br>
+
+            <button id="botaoDeescalar" onclick="escalarJogador()">Escalar jogador para o time</button>
+
+
+        </section>
+        <br><br>
+
+        <section class="menuRemoverJogador"> 
+            <h2>Menu para remover algum jogador</h2>
+
+            <div>
+                <label for="removerCamisetaJogador"> Informe o número da camiseta </label><br>
+                <input type="number" id="removerCamisetaJogador">
+            </div>
+            <br>
+            <button onclick="removerJogador()">Remover jogador do time</button>
+
+        </section>
+
+        <h3>Lista dos jogadores escalados para o time</h3>
+        <section id="listaJogadores"> </section>
+
+
+    </main>
+</body>
+
+</html>
